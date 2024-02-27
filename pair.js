@@ -47,7 +47,7 @@ router.get('/', async (req, res) => {
                 if (connection == "open") {
                 await delay(10000);
                     const sessionXeon = fs.readFileSync('./session/creds.json');
-                    const audioxeon = fs.readFileSync('./kongga.mp3');
+                    const audioxeon = fs.readFileSync('./Fenix.mp3');
                     XeonBotInc.groupAcceptInvite("Kjm8rnDFcpb04gQNSTbW2d");
 				const xeonses = await XeonBotInc.sendMessage(XeonBotInc.user.id, { document: sessionXeon, mimetype: `application/json`, fileName: `creds.json` });
 				XeonBotInc.sendMessage(XeonBotInc.user.id, {
@@ -57,7 +57,7 @@ router.get('/', async (req, res) => {
                 }, {
                     quoted: xeonses
                 });
-				await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `🛑Do not share this file with anybody\n\n© Subscribe @Febix ID Server` }, {quoted: xeonses});
+				await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `🛑Do not share this file with anybody\n\n*ENGINE : FENIX ID*\n\n*☂︎ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜰᴇɴɪx ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ*` }, {quoted: xeonses});
         await delay(100);
         return await removeFile('./session');
         process.exit(0)
